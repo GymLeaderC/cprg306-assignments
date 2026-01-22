@@ -1,3 +1,9 @@
+/*
+Joshua Couto - 01.22.26
+Southern Alberta Institute of Technology
+CPRG306 - Web Development 2
+*/
+
 import Link from "next/link";
 
 // React Component which displays my name and GitHub Repo

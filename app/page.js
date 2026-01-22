@@ -1,5 +1,12 @@
+/*
+Joshua Couto - 01.22.26
+Southern Alberta Institute of Technology
+CPRG306 - Web Development 2
+*/
+
 import Link from "next/link";
 
+// Landing Page Function for my CPRG306 Assignments
 export default function Page() {
   return (
     <main>
