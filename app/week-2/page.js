@@ -1,6 +1,6 @@
 /*
 Joshua Couto - 01.22.26
-Assignment 2: Introduction to React
+Assignment 2: NextJS Setup & Deploy
 Southern Alberta Institute of Technology
 CPRG306 - Web Development 2
 */
