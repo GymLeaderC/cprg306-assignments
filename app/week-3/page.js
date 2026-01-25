@@ -18,9 +18,8 @@ export default function Page() {
     <main>
       <h1 className="text-2xl font-bold mt-4 mb-4 ml-4 mr-2">Shopping List</h1>
       <ItemList />
-      <Link className="text-2xl font-bold text-right"
-        href="/cprg306-assignments/app/page.js">Home Page</Link>
+      <Link className="block text-2xl font-bold text-right mt-4 mr-4 mb-4"
+        href="/">Return to Home Page {'\u003e'}{'\u003e'}</Link>
     </main>
   );
 }
-
