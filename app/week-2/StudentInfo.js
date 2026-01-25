@@ -7,6 +7,7 @@ CPRG306 - Web Development 2
 import Link from "next/link";
 
 // React Component which displays my name and GitHub Repo
+
 export default function StudentInfo() {
   return (
     <div>
@@ -16,3 +17,17 @@ export default function StudentInfo() {
     </div>
   );
 }
+
+/* PRACTICE: StudentInfo component using props rather than hardcoding
+
+export default function StudentInfo2({name, githubUrl}) {
+  return (
+    <div>
+      <p>{name}</p>
+      <Link href={githubUrl}>
+        GitHub Repository</Link>
+    </div>
+  );
+}
+
+*/
