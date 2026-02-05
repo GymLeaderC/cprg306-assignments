@@ -12,7 +12,7 @@ displays them in a list item element.
 
 export default function Item({name, quantity, category}) {
   return (
-    <li className="flex flex-col bg-slate-100 text-black text-bold rounded-lg p-4 mr-2 ml-2">
+    <li className="flex flex-col bg-slate-100 text-black font-bold rounded-lg p-4 mr-2 ml-2">
       <p>{name}</p> 
       <p>Quantity: {quantity}</p> 
       <p>Category: {category}</p>
