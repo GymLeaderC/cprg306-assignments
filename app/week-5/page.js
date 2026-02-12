@@ -8,6 +8,9 @@ CPRG306 - Web Development 2
 import NewItem from "./NewItem"
 import Link from "next/link"
 
+
+// Defining How the Page Component Renders
+
 export default function Page() {
   return (
     <main>

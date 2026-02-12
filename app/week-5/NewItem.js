@@ -10,12 +10,14 @@ CPRG306 - Web Development 2
 import { useState } from "react";
 
 // Defining New Item Functional Compononent
+
 export default function NewItem() {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
 
   // Defining the handleSubmit Function
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -28,7 +30,8 @@ export default function NewItem() {
     setCategory("produce");
   }
 
-  // Defining the Form UI 
+  // Defining How the Form UI Renders
+
   return (
     <form onSubmit={handleSubmit}>
       <input
