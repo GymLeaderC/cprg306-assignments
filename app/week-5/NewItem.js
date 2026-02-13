@@ -33,34 +33,48 @@ export default function NewItem() {
   // Defining How the Form UI Renders
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <form onSubmit={handleSubmit}
+      className="bg-white rounded-lg p-6 m-4 max-w-md">
+      <label className="text-black font-bold block mb-1">Product</label>
+      <input className="w-full p-2 rounded-md border-2 border-black text-black mb-4"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
       />
-      <input
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-        min="1"
-        max="99"
-      />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="produce">Produce</option>
-        <option value="dairy">Dairy</option>
-        <option value="bakery">Bakery</option>
-        <option value="meat">Meat</option>
-        <option value="frozen-foods">Frozen Foods</option>
-        <option value="canned-goods">Canned Goods</option>
-        <option value="dry-goods">Dry Goods</option>
-        <option value="beverages">Beverages</option>
-        <option value="snacks">Snacks</option>
-        <option value="household">Household</option>
-        <option value="other">Other</option>
-      </select>
-      <button type="submit">+</button>
+      <div className="flex gap-4 mb-4">
+        <div className="w-1/2">
+          <label className="text-black font-bold block mb-1">Quantity</label>
+          <input className="w-full h-[42px] p-2 rounded-md border-2 border-black text-black"
+            type="number"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+            min="1"
+            max="99"
+          />
+        </div>
+        <div className="w-1/2">
+          <label className="text-black font-bold block mb-1">Department</label>
+          <select className="w-full h-[42px] p-2 rounded-md border-2 border-black text-black"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}>
+              <option value="produce">Produce</option>
+              <option value="dairy">Dairy</option>
+              <option value="bakery">Bakery</option>
+              <option value="meat">Meat</option>
+              <option value="frozen-foods">Frozen Foods</option>
+              <option value="canned-goods">Canned Goods</option>
+              <option value="dry-goods">Dry Goods</option>
+              <option value="beverages">Beverages</option>
+              <option value="snacks">Snacks</option>
+              <option value="household">Household</option>
+              <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div className="flex justify-end">
+        <button className="w-10 h-10 rounded-full border-2 border-green-500 bg-green-500 text-white font-bold text-xl" type="submit">+</button>
+      </div>
     </form>
   );
 }
