@@ -39,7 +39,7 @@ export default function NewItem({ onAddItem }) {
       <input className="w-full p-2 rounded-md border-2 border-black text-black mb-4"
         type="text"
         value={name}
-        onChange={(e) => setQuantity(Number(e.target.value))}
+        onChange={(e) => setName(e.target.value)}
         required
       />
       <div className="flex gap-4 mb-4">
@@ -48,7 +48,7 @@ export default function NewItem({ onAddItem }) {
           <input className="w-full h-[42px] p-2 rounded-md border-2 border-black text-black"
             type="number"
             value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
+            onChange={(e) => setQuantity(Number(e.target.value))}
             min="1"
             max="99"
           />
