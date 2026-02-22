@@ -14,12 +14,12 @@ import Link from "next/link"
 export default function Page() {
   return (
     <main className="bg-black min-h-screen">
-  <div className="flex justify-between items-center bg-green-500 p-4">
-    <h1 className="text-2xl font-bold text-white">Shopping List</h1>
-    <Link className="text-sm font-bold text-white" 
-      href="/">Return to Home Page {'\u003e'}{'\u003e'}</Link>
-  </div>
-  <NewItem />
-</main>
+      <div className="flex justify-between items-center bg-green-500 p-4">
+        <h1 className="text-2xl font-bold text-white">Shopping List</h1>
+        <Link className="text-sm font-bold text-white" 
+          href="/">Return to Home Page {'\u003e'}{'\u003e'}</Link>
+      </div>
+      <NewItem />
+    </main>
   )
 }
