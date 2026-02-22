@@ -5,20 +5,35 @@
  * Assignment 6: Interactivity w/ Forms
 */
 
-import Item from './Item';
-import items from './items.json';
+"use client"
 
-export default function ItemList() {
+import { useState } from "react";
+import Item from './item.js';
+
+export default function ItemList({ items }) {
+  const [sortBy, setSortBy] = useState("name");
+
+  const sortedItems = [...items].sort((a, b) => {
+    if (sortBy === "name") {
+      return a.name.localeCompare(b.name);
+    }
+    return a.category.localeCompare(b.category);
+  });
+
   return (
-    <ul className="space-y-4 mb-2">
-      {items.map((item) => (
-        <Item
-          key={item.id}
-          name={item.name}
-          quantity={item.quantity}
-          category={item.category}
-        />
-      ))}
-    </ul>
+    <div>
+      <button onClick={() => setSortBy("name")}>Name</button>
+      <button onClick={() => setSortBy("category")}>Category</button>
+      <ul className="space-y-4 mb-2">
+        {sortedItems.map((item) => (
+          <Item
+            key={item.id}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }
