@@ -58,17 +58,17 @@ export default function NewItem() {
           <select className="w-full h-[42px] p-2 rounded-md border-2 border-black text-black"
             value={category}
             onChange={(e) => setCategory(e.target.value)}>
-              <option value="produce">Produce</option>
-              <option value="dairy">Dairy</option>
-              <option value="bakery">Bakery</option>
-              <option value="meat">Meat</option>
-              <option value="frozen-foods">Frozen Foods</option>
-              <option value="canned-goods">Canned Goods</option>
-              <option value="dry-goods">Dry Goods</option>
-              <option value="beverages">Beverages</option>
-              <option value="snacks">Snacks</option>
-              <option value="household">Household</option>
-              <option value="other">Other</option>
+            <option value="produce">Produce</option>
+            <option value="dairy">Dairy</option>
+            <option value="bakery">Bakery</option>
+            <option value="meat">Meat</option>
+            <option value="frozen-foods">Frozen Foods</option>
+            <option value="canned-goods">Canned Goods</option>
+            <option value="dry-goods">Dry Goods</option>
+            <option value="beverages">Beverages</option>
+            <option value="snacks">Snacks</option>
+            <option value="household">Household</option>
+            <option value="other">Other</option>
           </select>
         </div>
       </div>
