@@ -27,8 +27,14 @@ export default function Page() {
         <Link className="text-sm font-bold text-white" 
           href="/">Return to Home Page {'\u003e'}{'\u003e'}</Link>
       </div>
-      <NewItem onAddItem={handleAddItem}/>
-      <ItemList items={items}/>
+      <div className="flex">
+        <div className="flex-1 min-w-0">
+          <NewItem onAddItem={handleAddItem}/>
+        </div>
+        <div className="flex-1 min-w-0">
+          <ItemList items={items}/>
+        </div>
+      </div>
     </main>
   )
 }

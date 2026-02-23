@@ -21,16 +21,29 @@ export default function ItemList({ items }) {
   });
 
   return (
-    <div>
-      <button onClick={() => setSortBy("name")}>Name</button>
-      <button onClick={() => setSortBy("category")}>Category</button>
+    <div className="m-4">
+      <div className="flex gap-2 mb-4 mx-2">
+        <button
+          className={`flex-1 px-4 py-2 rounded-lg font-bold ${
+            sortBy === "name"
+              ? "bg-green-500 text-white"
+              : "bg-white text-black"
+          }`}
+          onClick={() => setSortBy("name")}>Name
+        </button>
+        <button
+          className={`flex-1 px-4 py-2 rounded-lg font-bold ${
+            sortBy === "category"
+              ? "bg-green-500 text-white"
+              : "bg-white text-black"
+          }`}
+          onClick={() => setSortBy("category")}>Category
+        </button>
+      </div>
       <ul className="space-y-4 mb-2">
         {sortedItems.map((item) => (
           <Item
-            key={item.id}
-            name={item.name}
-            quantity={item.quantity}
-            category={item.category}
+            key={item.id} {...item} 
           />
         ))}
       </ul>
