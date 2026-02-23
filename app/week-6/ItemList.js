@@ -40,7 +40,7 @@ export default function ItemList({ items }) {
           onClick={() => setSortBy("category")}>Category
         </button>
       </div>
-      <ul className="space-y-4 mb-2">
+      <ul className="grid grid-cols-2 gap-2 mx-2 mb-2">
         {sortedItems.map((item) => (
           <Item
             key={item.id} {...item} 
