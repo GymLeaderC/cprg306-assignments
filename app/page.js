@@ -1,8 +1,7 @@
 /*
-Joshua Couto - 01.22.26
+Joshua Couto - 03.06.26
 Southern Alberta Institute of Technology
 CPRG306 - Web Development 2
-Assignment 2
 */
 
 import Link from "next/link";
@@ -17,7 +16,8 @@ export default function Page() {
         <Link href="/week-3">Week 3 - </Link>
         <Link href="/week-4">Week 4 - </Link>
         <Link href="/week-5">Week 5 - </Link>
-        <Link href="/week-6">Week 6   </Link>
+        <Link href="/week-6">Week 6 - </Link>
+        <Link href="/week-7">Week 7   </Link>
       </div>
     </main>
   );

@@ -2,7 +2,7 @@
  * @author Joshua Couto - 02.22.26
  * Southern Alberta Institute of Technology
  * CPRG-306 - Web Development 2
- * Assignment 6: Interactivity w/ Forms
+ * Assignment 7: Advanced State Management
 */
 
 "use client"
@@ -17,7 +17,7 @@ export default function Page() {
   const [items, setItems] = useState(itemsData);
 
   const handleAddItem = (newItem) => {
-    setItems([...items, newItem]);
+    setItems((prev) => [...prev, newItem]);
   };
 
   return (

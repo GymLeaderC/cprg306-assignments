@@ -1,0 +1,16 @@
+/**
+ * @author Joshua Couto - 02.22.26
+ * Southern Alberta Institute of Technology
+ * CPRG-306 - Web Development 2
+ * Assignment 7: Advanced State Management
+*/
+
+export default function Item({name, quantity, category}) {
+  return (
+    <li className="flex flex-col bg-slate-100 text-black font-bold rounded-lg p-4">
+      <p>{name}</p> 
+      <p>Quantity: {quantity}</p> 
+      <p>Category: {category}</p>
+    </li>
+  );
+}
