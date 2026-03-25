@@ -2,7 +2,7 @@
  * @author Joshua Couto - 03.22.26
  * Southern Alberta Institute of Technology
  * CPRG-306 - Web Development 2
- * Assignment 8: Fetching Data
+ * Assignment 9: Firebase Auth
 */
 
 export default function Item({name, quantity, category, onSelect}) {

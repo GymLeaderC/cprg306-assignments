@@ -1,3 +1,10 @@
+/**
+ * @author Joshua Couto - 03.22.26
+ * Southern Alberta Institute of Technology
+ * CPRG-306 - Web Development 2
+ * Assignment 9: Firebase Auth
+*/
+
 "use client";
 
 import { useContext, createContext, useState, useEffect } from "react";
