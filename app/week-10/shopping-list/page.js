@@ -21,6 +21,8 @@ export default function Page() {
   const [selectedItem, setSelectedItem] = useState("");
   
   const loadItems = async () => {
+    if (!user) return;
+    
     const fetchedItems = await getItems(user.uid);
     setItems(fetchedItems);
   };
