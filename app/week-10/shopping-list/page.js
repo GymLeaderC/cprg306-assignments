@@ -10,22 +10,33 @@
 import ItemList from "./ItemList"
 import NewItem from "./NewItem"
 import MealIdeas from "./MealIdeas"
-import itemsData from "./items.json"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useUserAuth } from "../../contexts/AuthContext"
+import { getItems, addItem } from "../_services/shopping-list-service"
 
 export default function Page() {
   const { user } = useUserAuth();
-  const [items, setItems] = useState(itemsData);
+  const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState("");
+  
+  const loadItems = async () => {
+    const fetchedItems = await getItems(user.uid);
+    setItems(fetchedItems);
+  };
+
+  useEffect(() => {
+    if (user) {
+      loadItems();
+    }
+  }, [user]);
 
   if (!user) {
     return (
       <main className="flex items-center justify-center min-h-screen bg-black">
         <p className="text-white text-xl">
           Please{" "}
-          <a href="/week-9" className="text-green-500 underline">
+          <a href="/week-10" className="text-green-500 underline">
             log in
           </a>{" "}
           to view the shopping list.
@@ -34,7 +45,8 @@ export default function Page() {
     );
   }
 
-  const handleAddItem = (newItem) => {
+  const handleAddItem = async (newItem) => {
+    const id = await addItem(user.uid, newItem);
     setItems((prev) => [...prev, newItem]);
   };
 
